@@ -1,0 +1,106 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root{
+  --primary-color: #342E59;
+  --secondary-color: #F2C4D0;
+  --white-color: #fff;
+  --black-color: #000;
+  --bs-warning: #BF4904;
+  --bs-gray: #ddd;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --text-color:#333;
+  --text-gray: #777;
+  --my-font: "EB Garamond", serif;
+  ;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+
+
+body{
+  font-family: var(--my-font);
+  background-color: var(--bs-gray-100);
+  color: var(--black-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+nav a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+nav a:hover::after{
+  width: 100%;
+}
+
+a:hover{
+  color: var(--secondary-color);
+}
+
+
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  list-style-type: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Scroll bar and Smooth scroll */
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--bs-gray-100);
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:active{
+  background: var(--primary-color);
+}

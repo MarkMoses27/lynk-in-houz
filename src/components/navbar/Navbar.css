@@ -1,0 +1,56 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    position: relative;
+}
+
+
+.logo-container {
+   max-width: 120px;
+   height: auto;
+   margin: 0 20px;
+   cursor: pointer;
+
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+
+
+
+
+
+.book-now-btn {
+    background-color: var(--bs-warning); /* or any other color you prefer */
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .book-now-btn:hover {
+    color: var(--black-color);
+    background-color: var(--primary-color);
+  }
+  

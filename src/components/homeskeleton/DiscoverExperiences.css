@@ -1,0 +1,125 @@
+.discover-experiences {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.discover-experiences h1 {
+  color: var(--primary-color);
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.discover-experiences h3 {
+  color: var(--bs-warning);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.experience {
+  display: inline-block;
+  width: 30%;
+  margin: 2% 1%;
+  text-align: justify;
+  
+}
+
+.item1,
+.item2, .item3 {
+  background-color: var(--bs-gray-100);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item1 img,
+.item2 img, .item3 img {
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.experience img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.item1 h2,
+.item2 h2, .item3 h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item1 p,
+.item2 p, .item3 p {
+  color: #000;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.item1 a,
+.item2 a, .item3 a {
+  display: inline-block;
+  color: var(--black-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 900;
+  transition: background-color 0.3s ease;
+}
+
+.item1 a:hover,
+.item2 a:hover, .item3 a:hover {
+  color: var(--bs-warning);
+}
+
+
+@media screen and (max-width: 768px) {
+  .experience {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .item1 img,
+  .item2 img, .item3 img {
+    width: 100%;
+  }
+
+  .item1 h2,
+  .item2 h2, .item3 h2 {
+    font-size: 20px;
+  }
+
+  .item1 p, 
+  .item2 p, .item3 p {
+    font-size: 16px;
+  }
+
+  .item1 a,
+  .item2 a, .item3 a {
+    font-size: 14px;
+  }
+
+  .item1 a:hover,
+  .item2 a:hover, .item3 a:hover {
+    color: var(--bs-warning);
+  }
+  .item1,
+  .item2, .item3 {
+    padding: 10px;
+  }
+
+  .discover-experiences h1 {
+    font-size: 28px;
+  }
+
+  .discover-experiences h3 {
+    font-size: 20px;
+  }
+  .discover-experiences {
+    padding: 20px 10px;
+  }
+  
+}
