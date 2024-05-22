@@ -31,11 +31,9 @@ nav li {
 }
 
 nav a {
-    color: var(--white-color);
+    color: black;
     font-size: 1.2rem;
 }
-
-
 
 
 
@@ -47,10 +45,29 @@ nav a {
     border-radius: 25px;
     cursor: pointer;
     text-decoration: none;
-  }
-  
-  .book-now-btn:hover {
+}
+
+.book-now-btn:hover {
     color: var(--black-color);
-    background-color: var(--primary-color);
-  }
-  
+}
+
+.nav-item {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid grey;
+    color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 4px 0 4px 0;
+}
+
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
