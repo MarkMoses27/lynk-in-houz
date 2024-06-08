@@ -1,6 +1,6 @@
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faPinterest, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faYoutube, faLinkedin, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
@@ -13,10 +13,9 @@ export default function Footer() {
           <div className='icons'>
             <a href="https://www.facebook.com/lynkinhouz" target="_blank"><FontAwesomeIcon icon={faFacebook} className='footer__icon'/></a>
             <a href="https://www.instagram.com/lynkinhouz/" target="_blank"><FontAwesomeIcon icon={faInstagram} className='footer__icon' /></a>
-            <a href="https://www.pinterest.com/lynkinhouz/" target="_blank"><FontAwesomeIcon icon={faPinterest} className='footer__icon'/></a>
             <a href="https://www.youtube.com/@lynkinhouz" target="_blank"><FontAwesomeIcon icon={faYoutube} className='footer__icon'/></a>
             <a href="https://www.linkedin.com/company/lynkinhouz/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className='footer__icon' /></a>
-            <a href="https://twitter.com/lynkinhouz" target="_blank"><FontAwesomeIcon icon={faTwitter} className='footer__icon'/></a>
+            <a href="https://twitter.com/lynkinhouz" target="_blank"><FontAwesomeIcon icon={faTiktok} className='footer__icon'/></a>
           </div>
         </div>
         <div className='section'>

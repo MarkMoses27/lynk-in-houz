@@ -11,7 +11,7 @@ function Navbar() {
     },
     {
       id: 0,
-      title: 'About',
+      title: 'About US ',
       link: '/about',
       items: [
         { id: 0, title: 'Our History', link: '/' },
@@ -34,17 +34,22 @@ function Navbar() {
       title: 'Pages',
       link: '/pages',
       items: [
-        { id: 0, title: 'page 1', link: '/' },
-        { id: 1, title: 'page 2', link: '/' },
-        { id: 2, title: 'page 3', link: '/' }
+        { id: 0, title: 'Team', link: '/team' },
+        { id: 1, title: 'Pricing Plan', link: '/pricing' },
+        { id: 2, title: 'FAQ', link: '/faq' }
       ],
     },
     {
       id: 0,
-      title: 'blog',
+      title: 'Blog',
       link: '/blog',
     },
-    // ... other items
+  
+    {
+      id: 0,
+      title: 'Contact Us',
+      link: '/contact',
+    }
   ];
 
   return (

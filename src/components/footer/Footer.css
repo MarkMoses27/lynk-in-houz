@@ -5,7 +5,7 @@
 .footer__container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
   padding: 1rem;
 }
 
@@ -40,11 +40,10 @@
 
 .footer__icon,
 .contact__icon {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 20px;
-  width: 30px; /* Ensure all icons have the same width */
-  height: 30px; /* Ensure all icons have the same height */
+  width: 25px; 
+  height: 25px; 
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,46 +1,95 @@
-.booking-process {
-    padding: 2% 10%;
-    background-color: var(--bs-gray-100);
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  .booking-process h1 {
-    color: var(--bs-warning);
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
+.booking__process {
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 20px;
+}
 
-  .booking-process h1::after {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: var(--bs-warning);
-    margin-top: 5px;
-  }
+.booking__process h2 {
+  color:var(--bs-warning); 
+  margin:10px;
+  font-size: 16px;
+}
 
+.booking__process h1 {
+  color:var(--primary-color);
+  margin-bottom: 40px;
+}
 
+.steps {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.step {
+  position: relative;
+  width: 30%;
+}
+
+.step__image {
+  position: relative;
+  width: 170px; 
+  height: 170px; 
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.step__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step__number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color:var(--bs-warning); /* Customize this color */
+  color:var(--white-color);
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.step h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.step p {
+  margin-top: 10px;
+  color: var(--bs-gray-dark); /* Customize this color */
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
   .step {
-    margin-bottom: 30px;
+    width: 45%; /* Adjust width for medium screens */
   }
-  
-  .step h2 {
-    color: var(--primary-color);
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .step {
+    width: 100%; 
   }
-  
+}
+
+@media (max-width: 576px) {
+  .step__image {
+    width: 120px; 
+    height: 120px;
+  }
+
+  .step__number {
+    padding: 8px 12px; 
+  }
+
+  .step h3 {
+    font-size: 1em; 
+  }
+
   .step p {
-    color: var(--black-color);
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 0.9em; 
   }
-  
-  .step:last-child {
-    margin-bottom: 0;
-  }
-  
+}

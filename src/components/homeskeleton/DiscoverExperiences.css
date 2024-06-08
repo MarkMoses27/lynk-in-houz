@@ -1,3 +1,4 @@
+
 .discover-experiences {
   text-align: center;
   padding: 40px 20px;
@@ -16,101 +17,143 @@
 }
 
 
-.experience {
-  display: inline-block;
-  width: 30%;
-  margin: 2% 1%;
-  text-align: justify;
-  
+.slick-dots {
+  margin-top: 1rem; 
+  bottom: -30px; 
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
 
-.item1,
-.item2, .item3 {
+.slick-dots li {
+  margin: 0 0.25rem; 
+  list-style: none;
+}
+
+.slick-dots li button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  font-size: 0; 
+}
+
+.slick-dots li button:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color); 
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: var(--bs-warning);
+}
+
+.experience-item {
   background-color: var(--bs-gray-100);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
 }
 
-.item1 img,
-.item2 img, .item3 img {
-  width: 350px;
+.slick-slide.slick-current .experience-item {
+  animation-delay: 0.1s;
+}
+
+.slick-slide.slick-active .experience-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item img {
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.5s forwards;
+  animation-delay: 0.2s;
 }
 
-.experience img:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.item1 h2,
-.item2 h2, .item3 h2 {
+.experience-item img:hover {
+  transform: scale(1.05);
+}
+
+.experience-item h2 {
   color: var(--primary-color);
   font-size: 24px;
   margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: 0.3s;
 }
 
-.item1 p,
-.item2 p, .item3 p {
+.experience-item p {
   color: #000;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: 0.4s;
 }
 
-.item1 a,
-.item2 a, .item3 a {
+.experience-item a {
   display: inline-block;
-  color: var(--black-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
   padding: 10px 20px;
-  border-radius: 5px;
   font-weight: 900;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: 0.5s;
 }
 
-.item1 a:hover,
-.item2 a:hover, .item3 a:hover {
+.experience-item a:hover {
   color: var(--bs-warning);
 }
 
-
 @media screen and (max-width: 768px) {
-  .experience {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .item1 img,
-  .item2 img, .item3 img {
-    width: 100%;
-  }
-
-  .item1 h2,
-  .item2 h2, .item3 h2 {
-    font-size: 20px;
-  }
-
-  .item1 p, 
-  .item2 p, .item3 p {
-    font-size: 16px;
-  }
-
-  .item1 a,
-  .item2 a, .item3 a {
-    font-size: 14px;
-  }
-
-  .item1 a:hover,
-  .item2 a:hover, .item3 a:hover {
-    color: var(--bs-warning);
-  }
-  .item1,
-  .item2, .item3 {
-    padding: 10px;
-  }
-
   .discover-experiences h1 {
     font-size: 28px;
   }
@@ -118,8 +161,4 @@
   .discover-experiences h3 {
     font-size: 20px;
   }
-  .discover-experiences {
-    padding: 20px 10px;
-  }
-  
 }
