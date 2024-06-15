@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import HomeSkeleton from './components/homeskeleton/HomeSkeleton';
 import About from './components/about/About';
 import Services from './components/services/Services';
+import Pages from './components/pages/Pages';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
@@ -14,6 +15,7 @@ function App() {
        <Route path="/" element={<HomeSkeleton />} />
        <Route path="/about" element={<About />} />
        <Route path="/services" element={<Services />} />
+       <Route path="/pages" element={<Pages />} />
       <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

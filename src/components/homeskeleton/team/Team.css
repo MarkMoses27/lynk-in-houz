@@ -8,7 +8,7 @@
 .team__container {
   display: flex;
   width: 100%;
-  height: 50vh; 
+  height: 60vh; 
 }
 
 .team__image, .team__header {
@@ -28,43 +28,48 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color:var(--black-color); 
+  background-color: var(--black-color); 
   color: var(--white-color); 
   padding: 0 20px; 
 }
 
 .slick-slide {
-  padding: 0 5px; /* Reduce space between slides */
+  padding: 0 10px; /* Reduce space between slides */
 }
 
 .slick-list {
-  margin: 0 -5px; /* Compensate for reduced padding */
+  margin: 0 auto; /* Center the slider */
+  max-width: 1200px; /* Set a max-width for the slider */
+  padding: 0 10px; /* Add padding to center the content */
 }
 
 .team__carousel {
-  width: 70%;
+  width: 100%;
   margin-top: -60px; /* Adjust as needed to touch the section */
+  display: flex;
+  justify-content: center; /* Center the carousel */
 }
 
 .team__member {
   padding: 10px;
   text-align: justify; /* Center the text and images */
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team__member img {
-  width: 100%;
-  height: auto;
-  max-width: 350px; /* or the desired size based on your layout */
-  max-height: 437.5px; /* for a 4:5 aspect ratio */
+  max-width: 300px; /* Increase size based on your layout */
+  max-height: 375px; /* for a 4:5 aspect ratio */
   object-fit: cover; /* ensures the image covers the container without stretching */
-  border: solid 5px var(--bs-gray); /* Reduce border size */
+  border: solid 5px var(--white-color);
 }
 
 @media (min-width: 768px) {
   .team__member img {
-    max-width: 250px; /* adjust size for larger screens */
-    max-height: 312.5px;
+    max-width: 300px; /* adjust size for larger screens */
+    max-height: 375px;
   }
 }
 
@@ -85,7 +90,7 @@
 
 .social-icons {
   position: absolute;
-  bottom: 10px;
+  bottom: 40px; /* Move icons up */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -103,7 +108,7 @@
 
 .social-icons .icon {
   background-color: var(--white-color);
-  margin: 2px 0; /* Reduce space between icons */
+  margin: 2px ; /* Adjust space between icons */
   color: #333;
   border-radius: 50%;
   padding: 5px;
@@ -121,13 +126,12 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;
+  font-size: 18px; /* Font size for the icon */
   background-color: var(--bs-warning);
   color: var(--white-color);
-  padding: 5px 17px;
   border-radius: 50%;
+  padding: 5px 12px; /* Padding for the icon */
   transition: transform 0.3s ease;
-  cursor: pointer;
   z-index: 1;
 }
 
@@ -144,4 +148,24 @@
   .plus-icon {
     left: 70%;
   }
+}
+
+@media screen and (max-width: 480px) {
+  .plus-icon {
+    left: 60%;
+  }
+
+  .team__member img {
+    max-width: 200px;
+    max-height: 250px;
+  }
+
+  .team__member h3 {
+    font-size: 0.9rem;
+  }
+
+  .team__member p {
+    font-size: 0.8rem;
+  }
+  
 }
