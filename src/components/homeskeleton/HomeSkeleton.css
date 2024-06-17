@@ -1,0 +1,80 @@
+
+  .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+  }
+  
+  .home__content {
+    max-width: 600px;
+  }
+  
+  .home__content h3 {
+    font-family: var(--my-font2);
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .home__content h1 {
+    font-family: var(--my-font);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 48px;
+  }
+  
+  .home__content p {
+    font-family: var(--my-font2);
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .book-now-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-now-btn a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: var(--my-font2);
+    font-size: 16px;
+  }
+  
+  .book-now-btn:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .home__image {
+    max-width: 600px;
+  }
+  
+  .home__image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .home__content {
+      text-align: center;
+    }
+  
+    .home__image {
+      margin-top: 30px;
+    }
+  }
+  

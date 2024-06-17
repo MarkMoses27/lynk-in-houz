@@ -13,11 +13,8 @@ function Navbar() {
       id: 0,
       title: 'About US ',
       link: '/about',
-      items: [
-        { id: 0, title: 'Our History', link: '/' },
-        { id: 1, title: 'Contact us', link: '/' },
-      ],
     },
+    
     {
       id: 0,
       title: 'Services',
