@@ -1,5 +1,10 @@
 import './BookingProcess.css';
 import NAIL from '../../assets/Nail.png';
+import NAIL1 from '../../assets/home-nail1.jpg'
+import NAIL2 from '../../assets/nail-art.jpg'
+
+
+
 export default function BookingProcess() {
   return (
     <div className='booking__process'>
@@ -8,7 +13,7 @@ export default function BookingProcess() {
       <div className='steps'>
         <div className='step'>
           <div className='step__image'>
-            <img src={NAIL} alt='Meeting' />
+            <img src={NAIL2} alt='Meeting' />
             <div className='step__number'>01</div>
           </div>
           <h3>Schedule Online</h3>
@@ -16,7 +21,7 @@ export default function BookingProcess() {
         </div>
         <div className='step'>
           <div className='step__image'>
-            <img src={NAIL} alt='Treatment' />
+            <img src={NAIL1} alt='Treatment' />
             <div className='step__number'>02</div>
           </div>
           <h3>We Come To Your Home or Hotel.</h3>
