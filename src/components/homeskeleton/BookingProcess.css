@@ -1,38 +1,55 @@
-.booking__process {
+:root {
+  --bg-color: #f7f7f7;
+  --primary-color: #34495e;
+  --secondary-color: #ecf0f1;
+  --highlight-color: #e67e22;
+  --white-color: #ffffff;
+  --gray-dark: #95a5a6;
+}
+
+.booking-process {
   background-color: var(--bg-color);
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.booking__process h2 {
-  color:var(--bs-warning); 
-  margin:10px;
-  font-size: 16px;
+.booking-process__subtitle {
+  color: var(--highlight-color);
+  margin: 10px 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.booking__process h1 {
-  color:var(--primary-color);
+.booking-process__title {
+  color: var(--primary-color);
   margin-bottom: 40px;
+  font-size: 2em;
+  font-weight: 700;
 }
 
 .steps {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .step {
   position: relative;
   width: 30%;
+  margin-bottom: 40px;
+  padding: 0 15px;
 }
 
 .step__image {
   position: relative;
-  width: 170px; 
-  height: 170px; 
-  margin: 0 auto;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
+  border: 5px solid var(--highlight-color);
 }
 
 .step__image img {
@@ -45,51 +62,57 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color:var(--bs-warning); /* Customize this color */
-  color:var(--white-color);
+  background-color: var(--highlight-color);
+  color: var(--white-color);
   border-radius: 50%;
   padding: 10px 15px;
   font-weight: bold;
-}
-
-.step h3 {
-  margin-top: 20px;
   font-size: 1.2em;
 }
 
-.step p {
+.step__title {
+  margin-top: 20px;
+  font-size: 1.4em;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.step__description {
   margin-top: 10px;
-  color: var(--bs-gray-dark); /* Customize this color */
+  color: var(--gray-dark);
+  font-size: 1em;
+  line-height: 1.6;
 }
 
 /* Media Queries */
 @media (max-width: 992px) {
   .step {
-    width: 45%; /* Adjust width for medium screens */
+    width: 45%;
   }
 }
 
 @media (max-width: 768px) {
   .step {
-    width: 100%; 
+    width: 100%;
   }
 }
 
 @media (max-width: 576px) {
   .step__image {
-    width: 120px; 
+    width: 120px;
     height: 120px;
   }
 
   .step__number {
-    padding: 8px 12px; 
+    padding: 8px 12px;
+    font-size: 1em;
   }
 
-  .step h3 {
-    font-size: 1em; 
+  .step__title {
+    font-size: 1.2em;
   }
 
-  .step p {
-    font-size: 0.9em; 
+  .step__description {
+    font-size: 0.9em;
   }
 }

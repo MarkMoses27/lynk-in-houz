@@ -1,46 +1,74 @@
 
+.package-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background-color: var(--bg-color);
+}
+
+.package-card {
+  background-color: var(--white-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+}
+
+.package-title {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.package-price-duration {
+  color: var(--highlight-color);
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.package-services {
+  font-size: 1em;
+  color: var(--gray-dark);
+  margin-bottom: 15px;
+}
+
+.package-description {
+  font-size: 0.9em;
+  color: var(--gray-dark);
+  margin-bottom: 15px;
+}
+
+.package-discount {
+  font-size: 1em;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+.schedule-button {
+  background-color: var(--highlight-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.schedule-button:hover {
+  background-color: #d35400;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .package-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: 1fr;
   }
-  
-  .package-card {
-    background-color: var(--white-color);
-    border: 1px solid var(--bs-gray);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px var(--bs-gray-dark);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    font-family: var(--my-font2);
-  }
-  
-  .package-title {
-    color: var(--primary-color);
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .package-price, .package-services, .package-description, .package-discount {
-    margin: 10px 0;
-  }
-  
-  .schedule-button {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .schedule-button:hover {
-    background-color: var(--secondary-color);
-    color: var(--black-color);
-  }
-  
+}

@@ -21,7 +21,7 @@ const packages = [
     title: 'Feel Fantastic Package',
     price: 'Ksh 9000',
     duration: '1hr 45mins',
-    services: 'Shoulder massage + Brazilian Waxing + Deep Cleanse Facial',
+    services: 'Shoulder massage + Deep Cleanse Facial',
     description: 'Perfect for a home-spa day',
     discount: 'Ksh 1000'
   },
@@ -56,14 +56,6 @@ const packages = [
     services: 'Express facial + Swedish massage + Standard body scrub',
     description: 'Perfect treatment to stay in top shape both mentally & physically',
     discount: 'Ksh 1500'
-  },
-  {
-    title: 'Waxing Combo',
-    price: 'Ksh 5000',
-    duration: '1hr',
-    services: 'Brazilian waxing + Legs waxing + Under-arms waxing',
-    description: 'Perfect if you are planning a beach vacation, wedding, and any time you want sparkly, silky, and smooth skin!',
-    discount: 'Ksh 1000'
   }
 ];
 
@@ -73,7 +65,7 @@ const Package = () => {
       {packages.map((pkg, index) => (
         <div className="package-card" key={index}>
           <h2 className="package-title">{pkg.title}</h2>
-          <p className="package-price">{pkg.price} | {pkg.duration}</p>
+          <p className="package-price-duration">{pkg.price} | {pkg.duration}</p>
           <p className="package-services">{pkg.services}</p>
           <p className="package-description">{pkg.description}</p>
           <p className="package-discount">Discount: {pkg.discount}</p>
