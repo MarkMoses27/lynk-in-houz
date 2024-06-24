@@ -1,164 +1,86 @@
+:root {
+  --primary-color: #34495e;
+  --highlight-color: #e67e22;
+  --background-color: #f7f7f7;
+  --white-color: #ffffff;
+  --gray-dark: #95a5a6;
+}
 
 .discover-experiences {
+  background-color: var(--background-color);
+  padding: 60px 20px;
   text-align: center;
-  padding: 40px 20px;
+}
+
+.discover-experiences h3 {
+  color: var(--highlight-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .discover-experiences h1 {
   color: var(--primary-color);
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
-.discover-experiences h3 {
-  color: var(--bs-warning);
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-
-.slick-dots {
-  margin-top: 1rem; 
-  bottom: -30px; 
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-.slick-dots li {
-  margin: 0 0.25rem; 
-  list-style: none;
-}
-
-.slick-dots li button {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  font-size: 0; 
-}
-
-.slick-dots li button:before {
-  content: '';
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--primary-color); 
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.slick-dots li.slick-active button:before {
-  background-color: var(--bs-warning);
+.slick-slider {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .experience-item {
-  background-color: var(--bs-gray-100);
-  border-radius: 10px;
+  background-color: var(--white-color);
   padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-}
-
-.slick-slide.slick-current .experience-item {
-  animation-delay: 0.1s;
-}
-
-.slick-slide.slick-active .experience-item {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transition: transform 0.3s ease;
 }
 
 .experience-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .experience-item img {
   width: 100%;
-  height: auto;
+  border-radius: 10px;
   margin-bottom: 20px;
-  transition: transform 0.3s ease;
-  opacity: 0;
-  transform: scale(0.95);
-  animation: fadeInScale 0.5s forwards;
-  animation-delay: 0.2s;
 }
 
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.experience-item img:hover {
-  transform: scale(1.05);
-}
-
-.experience-item h2 {
+.experience-content h2 {
   color: var(--primary-color);
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInUp 0.5s forwards;
-  animation-delay: 0.3s;
 }
 
-.experience-item p {
-  color: #000;
-  font-size: 18px;
-  line-height: 1.6;
+.experience-content p {
+  color: var(--gray-dark);
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInUp 0.5s forwards;
-  animation-delay: 0.4s;
 }
 
-.experience-item a {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 10px 20px;
-  font-weight: 900;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeInUp 0.5s forwards;
-  animation-delay: 0.5s;
+.experience-content a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.experience-item a:hover {
-  color: var(--bs-warning);
+.experience-content a:hover {
+  color: #d35400;
 }
 
-@media screen and (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .discover-experiences h1 {
-    font-size: 28px;
+    font-size: 2rem;
   }
 
-  .discover-experiences h3 {
-    font-size: 20px;
+  .experience-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .experience-content p {
+    font-size: 1rem;
   }
 }

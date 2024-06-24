@@ -1,54 +1,100 @@
-/* Home.css */
+:root {
+  --primary-color: #34495e;
+  --highlight-color: #e67e22;
+  --background-color: #f7f7f7;
+  --white-color: #ffffff;
+  --gray-dark: #95a5a6;
+}
+
 .home-section {
+  background-color: var(--background-color);
+  padding: 60px 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 50px;
-  background-color: var(--secondary-color);
+  justify-content: center;
 }
 
 .home-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   width: 100%;
-  background-color: var(--secondary-color ); /* Match background color */
-  border-radius: 10px; /* Rounded corners for the container */
+  padding: 40px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .home-content {
   flex: 1;
-  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.home-content h3 {
+  color: var(--highlight-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.home-content h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  color: var(--gray-dark);
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.book-now-btn {
+  background-color: var(--highlight-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #d35400;
+}
+
+.book-now-btn a {
+  color: var(--white-color);
+  text-decoration: none;
 }
 
 .home-image {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .home-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Rounded corners for the image */
-  box-shadow: none; /* Remove any box shadow */
-  border: none; /* Remove any borders */
+  border-radius: 10px;
 }
 
-.book-now-btn {
-  background-color: #ff4081;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+  }
 
-.book-now-btn a {
-  color: white;
-  text-decoration: none;
+  .home-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .home-image {
+    margin-top: 20px;
+  }
 }

@@ -1,4 +1,3 @@
-
 import { useSpring, animated } from 'react-spring';
 import HomeImage from "../../assets/mark1.png";
 import "./Home.css";
@@ -24,7 +23,7 @@ export default function Home() {
           </button>
         </animated.div>
         <animated.div style={slideInFromRight} className="home-image">
-          <img src={HomeImage} alt="home" className='bg-transparent'/>
+          <img src={HomeImage} alt="home" />
         </animated.div>
       </div>
     </section>

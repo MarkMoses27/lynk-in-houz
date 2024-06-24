@@ -8,22 +8,12 @@
 @tailwind utilities;
 
 
-
-:root{
-  --primary-color: #342E59;
-  --secondary-color: #F2C4D0;
-  --white-color: #fff;
-  --black-color: #000;
-  --bs-warning: #BF4904;
-  --bs-gray: #ddd;
-  --bs-gray-dark: #343a40;
-  --bs-gray-100: #f8f9fa;
-  --text-color:#333;
-  --text-gray: #777;
-  --bg-color: #F9F3F0;
-  --my-font: "EB Garamond", serif;
-  --my-font2: "Roboto Slab", serif;
-  
+:root {
+  --primary-color: #34495e;
+  --highlight-color: #e67e22;
+  --background-color: #f7f7f7;
+  --white-color: #ffffff;
+  --gray-dark: #95a5a6;
 }
 
 *{

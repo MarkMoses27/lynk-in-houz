@@ -13,7 +13,6 @@ const experiences = [
     title: "Pedicure & Manicure",
     description: "Do you have a hard time making a decision? We are happy to offer advice at the best nail salon!",
     image: Nail
-  
   },
   {
     id: 2,
@@ -67,14 +66,16 @@ export default function DiscoverExperiences() {
   return (
     <section className="discover-experiences">
       <h3>What We Do</h3>
-      <h1>Nail professionals for all your needs</h1>
+      <h1>Nail Professionals for All Your Needs</h1>
       <Slider {...settings}>
         {experiences.map((exp) => (
           <div className="experience-item" key={exp.id}>
-            <img src={exp.image} alt="experience" />
-            <h2>{exp.title}</h2>
-            <p>{exp.description}</p>
-            <a href="/services">Discover →</a>
+            <img src={exp.image} alt={exp.title} />
+            <div className="experience-content">
+              <h2>{exp.title}</h2>
+              <p>{exp.description}</p>
+              <a href="/services">Discover →</a>
+            </div>
           </div>
         ))}
       </Slider>
