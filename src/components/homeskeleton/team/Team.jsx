@@ -2,12 +2,12 @@ import Slider from 'react-slick';
 import './Team.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import CEO from '../../../assets/ceo.png';
+import CEO from '../../../assets/gallery3.jpg';
 import BEAUTICIAN from '../../../assets/beautician.png';
 import BEAUTICIAN1 from '../../../assets/beautician1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp, faTiktok } from '@fortawesome/free-brands-svg-icons';
-import TEAM from '../../../assets/team1.jpg';
+import TEAM from '../../../assets/gallery.jpg';
 
 const socialIcons = [
   { name: 'Facebook', icon: faFacebook },

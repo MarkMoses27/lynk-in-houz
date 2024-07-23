@@ -1,115 +1,62 @@
+:root {
+  --primary-color: #2c3e50;
+  --highlight-color: #f39c12;
+  --background-color: #f9f9f9;
+  --white-color: #ffffff;
+  --gray-dark: #7f8c8d;
+}
+
 .about-container {
   padding: 20px;
-  color: #333;
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-header {
-  text-align: justify;
-  margin-left: 100px;
+  text-align: center;
   margin-bottom: 40px;
 }
 
 .about-header h1 {
   font-size: 36px;
-  margin: 0;
+  color: var(--highlight-color);
 }
 
 .about-header p {
   font-size: 14px;
-  color: #888;
+  color: var(--gray-dark);
 }
 
 .about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-.about-content h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.about-content p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-.our-team {
-  margin-top: 60px;
-  text-align: center;
-}
-
-.our-team h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-.our-team p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.view-team-button {
-  background-color: transparent;
-  border: 2px solid #e67e22;
-  color: #e67e22;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  margin-bottom: 40px;
-}
-
-.view-team-button:hover {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.team-members {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 40px;
 }
 
-.team-member {
-  text-align: center;
+.about-description, .about-team {
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.team-member img {
-  border-radius: 8px;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+.about-description h2, .about-team h2 {
+  font-size: 24px;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
 }
 
-.team-member h3 {
-  font-size: 22px;
-  margin: 10px 0 5px 0;
-}
-
-.team-member p {
+.about-description p {
   font-size: 16px;
-  margin: 5px 0 10px 0;
+  line-height: 1.6;
+  color: var(--primary-color);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.social-icons a {
-  color: #888;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #e67e22;
+.about-team h2 {
+  margin-bottom: 20px;
+  text-align: center;
 }

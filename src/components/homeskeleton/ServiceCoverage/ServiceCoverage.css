@@ -1,67 +1,68 @@
+:root {
+  --primary-color: #2c3e50;
+  --highlight-color: #f39c12;
+  --background-color: #f9f9f9;
+  --white-color: #ffffff;
+  --gray-dark: #7f8c8d;
+}
+
 .service-coverage {
-    text-align: center;
-    padding: 20px 50px;
-  }
-  
-  .service-coverage h2 {
-    color: var(--bs-warning);
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .service-coverage p {
-    margin: 10px 0;
-  }
-  
-  .service-coverage table {
-    width: 100%;
-    margin: 20px 0;
-    border-collapse: collapse;
-  }
-  
-  .service-coverage th,
-  .service-coverage td {
-    border: 1px solid var(--bs-gray);
-    padding: 8px;
-  }
-  
-  .service-coverage th {
-    background-color: var(--bs-gray);
-    color:var(--bs-gray-dark);
-  }
-  
-  .service-coverage td {
-    color: var(--text-color);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .service-coverage {
-      padding: 20px;
-    }
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    .service-coverage h2 {
-      font-size: 20px;
-    }
+.service-coverage h2 {
+  text-align: center;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
 
-    .service-coverage table {
-      font-size: 14px;
-    }
+.service-coverage p {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .service-coverage th,
-    .service-coverage td {
-      padding: 5px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
 
-    .service-coverage p {
-      font-size: 14px;
-    }
+thead {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
 
-    .service-coverage h3 {
-      font-size: 16px;
-    }
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-dark);
+}
 
-    .service-coverage h4 {
-      font-size: 14px;
-    }
-    
-  }
+tbody tr:nth-child(even) {
+  background-color: var(--white-color);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--background-color);
+}
+
+.map-link {
+  display: block;
+  text-align: center;
+  background-color: var(--highlight-color);
+  color: var(--white-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.map-link:hover {
+  background-color: #e67e22;
+}

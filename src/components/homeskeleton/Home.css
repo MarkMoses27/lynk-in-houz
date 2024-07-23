@@ -1,10 +1,4 @@
-:root {
-  --primary-color: #34495e;
-  --highlight-color: #e67e22;
-  --background-color: #f7f7f7;
-  --white-color: #ffffff;
-  --gray-dark: #95a5a6;
-}
+
 
 .home-section {
   background-color: var(--background-color);
@@ -62,7 +56,7 @@
 }
 
 .book-now-btn:hover {
-  background-color: #d35400;
+  background-color:var(--highlight-color1);
 }
 
 .book-now-btn a {

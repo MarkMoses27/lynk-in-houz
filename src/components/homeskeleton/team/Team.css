@@ -118,7 +118,7 @@
 
 .social-icons .icon:hover {
   color: var(--white-color); 
-  background-color: var(--bs-warning);
+  background-color: var(--highlight-color);
 }
 
 .plus-icon {
@@ -127,7 +127,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px; /* Font size for the icon */
-  background-color: var(--bs-warning);
+  background-color: var(--highlight-color);
   color: var(--white-color);
   border-radius: 50%;
   padding: 5px 12px; /* Padding for the icon */

@@ -37,6 +37,9 @@ export default function ServiceCoverage() {
         </tbody>
       </table>
       <p>You can easily confirm on this map whether your location is within our service reach.</p>
+      <a href="https://www.google.com/maps/d/viewer?mid=1gZNLZPQ3BpV4G-KU9zFQj4aVNZmQbfsH&usp=sharing" target="_blank" rel="noopener noreferrer" className="map-link">
+        View Coverage Map
+      </a>
     </div>
   );
 }

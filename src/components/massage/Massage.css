@@ -1,0 +1,131 @@
+.massage {
+  background-color: var(--background-color);
+  font-family: var(--font-primary);
+}
+
+.massage-header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 4rem 2rem 2rem;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.massage-header h1 {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.massage-header p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.massage-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.massage-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.massage-card {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.massage-card:hover, .massage-card.selected {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--highlight-color);
+}
+
+.massage-card h3 {
+  color: var(--highlight-color);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-secondary);
+  font-size: 1.3rem;
+}
+
+.massage-card p {
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.massage-card .description {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.booking-section {
+  background-color: var(--gray-light);
+  padding: 2rem;
+  text-align: center;
+}
+
+.book-button {
+  background-color: var(--highlight-color);
+  color: var(--white-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.book-button:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .massage-types {
+    grid-template-columns: 1fr;
+  }
+  
+  .massage-header {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  
+  .massage-header h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+}
+

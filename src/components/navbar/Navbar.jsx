@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import LogoSVG from '../../assets/lynk-in-houz.svg';
 import './Navbar.css';
 
@@ -24,26 +24,24 @@ function Navbar() {
       title: 'Services',
       link: '/services',
       items: [
-        { id: 0, title: 'Pedicure', link: '/pedicure' },
-        { id: 1, title: 'Manicure', link: '/manicure' },
-        { id: 2, title: 'Nail Art', link: '/nail-art' },
-        { id: 3, title: 'Nail Extension', link: '/nail-extension' },
+        { id: 0, title: 'Pedicure & Manicure', link: '/pedicure-manicure' },
+        { id: 1, title: 'Nail Art', link: '/nail-art' },
+        { id: 2, title: 'Nail Extension', link: '/nail-extension' },
+        { id: 3, title: 'Massage', link: '/massage' },
+        { id: 4, title: 'Microblading', link: '/microblading' },
       ],
     },
     {
       id: 3,
-      title: 'Pages',
-      link: '/pages',
-      items: [
-        { id: 0, title: 'Team', link: '/team' },
-        { id: 1, title: 'Pricing Plan', link: '/pricing' },
-        { id: 2, title: 'FAQ', link: '/faq' }
-      ],
+      title: 'Gallery',
+      link: '/gallery',
+     
     },
     {
       id: 4,
       title: 'Blog',
       link: '/blog',
+    
     },
     {
       id: 5,
@@ -68,7 +66,15 @@ function Navbar() {
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           {navbarItems.map((item) => (
             <li key={item.id} className="nav-item">
-              <Link to={item.link} className="nav-links" onClick={toggleMenu}>{item.title}</Link>
+              <div className="nav-link-container">
+                <Link to={item.link} className="nav-links" onClick={toggleMenu}>{item.title}</Link>
+                {item.items && (
+                  <FontAwesomeIcon 
+                    icon={faChevronDown} 
+                    className="dropdown-icon" 
+                  />
+                )}
+              </div>
               {item.items && (
                 <ul className="dropdown-menu">
                   {item.items.map((link) => (
@@ -81,7 +87,7 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <Link to="/contact" className="book-now-btn">
+        <Link to="/contact" className="book-now-nav-btn">
           Book Now
         </Link>
       </div>

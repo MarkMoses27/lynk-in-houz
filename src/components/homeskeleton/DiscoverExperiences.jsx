@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import Nail from '../../assets/nail-art.jpg';
 import Nail1 from '../../assets/nail-service.svg'; 
-import Nail2 from '../../assets/home-nail1.jpg';
+import Nail2 from '../../assets/gallery1.jpg';
 import Nail3 from '../../assets/hero.png';
 import './DiscoverExperiences.css'; 
 import "slick-carousel/slick/slick.css"; 

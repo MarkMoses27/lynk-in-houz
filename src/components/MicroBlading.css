@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --highlight-color: #e67e22;
+  --highlight-color1: #d35400;
+  --background-color: #f7f7f7;
+  --white-color: #ffffff;
+  --gray-light: #ecf0f1;
+  --gray-medium: #bdc3c7;
+  --gray-dark: #95a5a6;
+  --black-color: #2c3e50;
+  --font-primary: 'Roboto Slab', serif;
+  --font-secondary: 'EB Garamond', serif;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--font-primary);
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.microblading {
+  padding: 20px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+
+.microblading-title {
+  font-family: var(--font-secondary);
+  font-size: 32px;
+  color: var(--black-color);
+  margin-bottom: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-medium);
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  box-shadow: 0 4px 8px var(--gray-light);
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-name {
+  font-size: 24px;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.service-price {
+  font-size: 20px;
+  color: var(--highlight-color1);
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .service-card {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .microblading-title {
+    font-size: 28px;
+  }
+
+  .service-name {
+    font-size: 22px;
+  }
+
+  .service-price {
+    font-size: 18px;
+  }
+
+  .service-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    width: 100%;
+  }
+
+  .microblading {
+    padding: 10px;
+  }
+
+  .microblading-title {
+    font-size: 24px;
+  }
+
+  .service-name {
+    font-size: 20px;
+  }
+
+  .service-price {
+    font-size: 16px;
+  }
+
+  .service-description {
+    font-size: 12px;
+  }
+}

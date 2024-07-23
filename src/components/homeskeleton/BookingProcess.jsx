@@ -1,6 +1,6 @@
 import './BookingProcess.css';
-import NAIL from '../../assets/Nail.png';
-import NAIL1 from '../../assets/home-nail1.jpg';
+import NAIL from '../../assets/gallery9.jpg';
+import NAIL1 from '../../assets/gallery2.jpg';
 import NAIL2 from '../../assets/nail-art.jpg';
 
 export default function BookingProcess() {

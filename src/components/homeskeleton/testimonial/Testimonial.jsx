@@ -1,73 +1,78 @@
 import { useState, useEffect } from 'react';
 import './Testimonial.css';
-import BEAUTICIAN from '../../../assets/beautician.png';
+
 const testimonials = [
   {
-    name: 'Jenifer Lopez',
+    name: 'Liz',
     role: 'Customer',
-    feedback: "Meticulous attention to detail. We use professional tools and techniques to ensure clean lines and a precise cut that creates a polished and well-groomed look. Whether it's a simple trim or a complete makeover, our stylists approach every haircut with meticulous attention to detail.",
-    image: BEAUTICIAN
+    feedback: "Meticulous attention to detail. We use professional tools and techniques to ensure clean lines and a precise cut that creates a polished and well-groomed look. Whether it's a simple trim or a complete makeover, our stylists approach every haircut with meticulous attention to detail."
   },
   {
-    name: 'Senjuti das',
-    role: 'Customer',
-    feedback: "Whether it's a simple trim or a complete makeover, our stylists approach every haircut with meticulous attention to detail. We use professional tools and techniques to ensure clean lines and a precise cut that creates a polished and well-groomed look.",
-    image: BEAUTICIAN
+    name: 'Martha Wanjiku',
+    feedback: "Whether it's a simple trim or a complete makeover, our stylists approach every haircut with meticulous attention to detail. We use professional tools and techniques to ensure clean lines and a precise cut that creates a polished and well-groomed look."
   },
   {
-    name: 'Customer 2',
+    name: 'Alice Wafula',
     role: 'Customer',
-    feedback: 'Feedback from customer 2.',
-    image: BEAUTICIAN
+    feedback: "I've never felt more confident and beautiful. The team here truly understands how to bring out the best in their clients. I'll definitely be coming back!"
   },
   {
-    name: 'Customer 3',
+    name: 'Michelle Ouma',
     role: 'Customer',
-    feedback: 'Feedback from customer 3.',
-    image: BEAUTICIAN
+    feedback: 'The level of skill and creativity here is unmatched. They listened to what I wanted and delivered beyond my expectations. Highly recommended!'
   },
   {
-    name: 'Customer 4',
+    name: 'Sophia Okonkwo',
     role: 'Customer',
-    feedback: 'Feedback from customer 4.',
-    image: BEAUTICIAN
+    feedback: 'From the moment I walked in, I felt welcomed and cared for. The results speak for themselves - I love my new look!'
   }
 ];
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState('left');
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setDirection('left');
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Change testimonial every 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
+  const nextTestimonial = () => {
+    setDirection('left');
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setDirection('right');
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
     <div className="testimonial-container">
-      <div className="testimonial-image">
-        <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].name} />
-        <blockquote>“</blockquote>
-      </div>
-      <div className="testimonial-content">
-        <h2 className="testimonial-title">Testimonials</h2>
-        <h3 className="testimonial-heading">Our Customer Feedback</h3>
+      <h2 className="testimonial-title">What Our Customers Say</h2>
+      <div className={`testimonial-card ${direction}`}>
         <p className="testimonial-feedback">{testimonials[currentIndex].feedback}</p>
-        <p className="testimonial-author">{testimonials[currentIndex].name}</p>
-        <p className="testimonial-role">{testimonials[currentIndex].role}</p>
-        <div className="testimonial-thumbnails">
-          {testimonials.map((testimonial, index) => (
-            <img
-              key={index}
-              src={testimonial.image}
-              alt={testimonial.name}
-              className={`testimonial-thumbnail ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => setCurrentIndex(index)}
-            />
-          ))}
-          <button className="testimonial-arrow" onClick={() => setCurrentIndex((currentIndex + 1) % testimonials.length)}>➜</button>
+        <div className="testimonial-author-info">
+          <p className="testimonial-author">{testimonials[currentIndex].name}</p>
+          <p className="testimonial-role">{testimonials[currentIndex].role}</p>
         </div>
+      </div>
+      <div className="testimonial-navigation">
+        <button className="testimonial-arrow" onClick={prevTestimonial}>←</button>
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            className={`testimonial-dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => {
+              setDirection(index > currentIndex ? 'left' : 'right');
+              setCurrentIndex(index);
+            }}
+          />
+        ))}
+        <button className="testimonial-arrow" onClick={nextTestimonial}>→</button>
       </div>
     </div>
   );

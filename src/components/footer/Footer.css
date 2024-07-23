@@ -1,104 +1,108 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --highlight-color: #e67e22;
+  --background-color: #f7f7f7;
+  --white-color: #ffffff;
+  --gray-light: #ecf0f1;
+  --gray-medium: #bdc3c7;
+  --gray-dark: #95a5a6;
+  --black-color: #2c3e50;
+  --font-primary: 'Roboto Slab', serif;
+  --font-secondary: 'EB Garamond', serif;
+}
+
 .footer {
   background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 3rem 0 1rem;
+  font-family: var(--font-primary);
 }
 
 .footer__container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
-  padding: 1rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .section {
-  padding: 20px 120px;
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 2rem;
 }
 
 .section h3 {
-  color: var(--secondary-color);
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.follow-us {
-  display: flex;
-  flex-direction: column;
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
 }
 
 .follow-us .icons {
   display: flex;
-  justify-content: flex-start;
+  gap: 1rem;
 }
 
-.section p,
-.section a {
-  display: flex;
-  align-items: center;
+.footer__icon {
   color: var(--white-color);
-  font-size: 1rem;
-  margin-bottom: 10px; /* Space out the contact items */
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-.footer__icon,
+.footer__icon:hover {
+  color: var(--highlight-color);
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.section ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section ul li a:hover {
+  color: var(--highlight-color);
+}
+
 .contact__icon {
-  color: var(--secondary-color);
-  font-size: 20px;
-  width: 25px; 
-  height: 25px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px; /* Margin to separate icon and text */
-  padding: 5px;
-  cursor: pointer;
-}
-
-.footer__icon:hover,
-.contact__icon:hover {
-  color: var(--white-color);
+  margin-right: 0.5rem;
+  color: var(--highlight-color);
 }
 
 .footer__hr {
-  border: 1px solid var(--secondary-color);
-  width: 90%;
-  margin: 20px auto;
-  height: 1px;
+  border: none;
+  border-top: 1px solid var(--gray-dark);
+  margin: 2rem 0 1rem;
 }
 
-.footer p {
-  color: var(--white-color);
+.footer > p {
   text-align: center;
-  font-size: 1rem; 
+  font-size: 0.9rem;
+  color: var(--gray-medium);
 }
 
-@media screen and (max-width: 768px) {
+.footer > p a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
   .footer__container {
     flex-direction: column;
-    align-items: center;
   }
 
   .section {
-    padding: 20px;
-  }
-
-  .section h3 {
-    text-align: center;
-  }
-
-  .follow-us .icons {
-    justify-content: center;
-  }
-
-  .footer__hr {
-    width: 100%;
-  }
-
-  .footer p {
-    text-align: center;
-  }
-
-  .footer__icon,
-  .contact__icon {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
   }
 }
