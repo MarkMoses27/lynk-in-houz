@@ -44,6 +44,7 @@
 
 .experience-item img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -70,8 +71,7 @@
   color: #d35400;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .discover-experiences h1 {
     font-size: 2rem;
   }
@@ -82,5 +82,38 @@
 
   .experience-content p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-experiences {
+    padding: 40px 15px;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .experience-item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .discover-experiences {
+    padding: 20px 10px;
+  }
+
+  .experience-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .experience-content p {
+    font-size: 0.9rem;
+  }
+
+  .experience-content a {
+    font-size: 0.9rem;
   }
 }

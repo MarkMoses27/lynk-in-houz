@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Package.css';
 
 const packages = [
@@ -13,7 +14,7 @@ const packages = [
     title: 'Feel Nice Package',
     price: 'Ksh 5000',
     duration: '1hr 15mins',
-    services: 'Eyebrow thread/wax + Shoulder massage + Express facial',
+    services: 'Eyebrow thread + Shoulder massage + Express facial',
     description: 'Perfect for a feel-good effect',
     discount: 'Ksh 800'
   },
@@ -37,7 +38,7 @@ const packages = [
     title: 'Feel Awesome Package',
     price: 'Ksh 6800',
     duration: '1hr 45mins',
-    services: 'Swedish massage + Standard body scrub + Under-arms waxing',
+    services: 'Swedish massage + Standard body scrub + Under-arms',
     description: 'Perfect for a bride-to-be',
     discount: 'Ksh 1000'
   },
@@ -62,16 +63,24 @@ const packages = [
 const Package = () => {
   return (
     <div className="package-container">
-      {packages.map((pkg, index) => (
-        <div className="package-card" key={index}>
-          <h2 className="package-title">{pkg.title}</h2>
-          <p className="package-price-duration">{pkg.price} | {pkg.duration}</p>
-          <p className="package-services">{pkg.services}</p>
-          <p className="package-description">{pkg.description}</p>
-          <p className="package-discount">Discount: {pkg.discount}</p>
-          <button className="schedule-button">Schedule Now ➜</button>
-        </div>
-      ))}
+      <h1 className="main-title">Our Packages</h1>
+      <div className="package-grid">
+        {packages.map((pkg, index) => (
+          <div className="package-card" key={index}>
+            <h2 className="package-title">{pkg.title}</h2>
+            <p className="package-price-duration">
+              <span className="price">{pkg.price}</span>
+              <span className="duration">{pkg.duration}</span>
+            </p>
+            <p className="package-services">{pkg.services}</p>
+            <p className="package-description">{pkg.description}</p>
+            <p className="package-discount">Save {pkg.discount}</p>
+            <Link to="/contact" className="book-now-button">
+              Book Now
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

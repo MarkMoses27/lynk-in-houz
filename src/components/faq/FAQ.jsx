@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './FAQ.css';
+import './Faq.css';
 
 const faqData = [
   {
@@ -92,7 +92,7 @@ const faqData = [
   }
 ];
 
-const FAQ = () => {
+const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = index => {
@@ -115,4 +115,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

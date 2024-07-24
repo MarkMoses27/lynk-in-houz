@@ -21,10 +21,10 @@
 }
 
 .logo {
-  height: 80px; /* Adjust height */
+  height: 100px; /* Adjust height */
   width: auto;
   display: block;
-  max-width: 150px; /* Set a maximum width if needed */
+  max-width: 250px; /* Set a maximum width if needed */
 }
 
 .menu-icon {

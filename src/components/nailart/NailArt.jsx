@@ -9,10 +9,6 @@ const NailArt = () => {
     note: "This service needs to be coupled with another service such as acrylic overlay or gel manicure."
   };
 
-  const handleBooking = () => {
-    alert("Booking Nail Art service. In a full application, this would open a booking form.");
-  };
-
   return (
     <div className="nail-art">
       <header className="nail-art-header">
@@ -31,12 +27,6 @@ const NailArt = () => {
           <p><strong>Price:</strong> Ksh {nailArtInfo.price.toLocaleString()}</p>
           <p><strong>Duration:</strong> {nailArtInfo.duration}</p>
           <p className="note">{nailArtInfo.note}</p>
-        </div>
-
-        <div className="booking-section">
-          <button className="book-button" onClick={handleBooking}>
-            Book Nail Art Service
-          </button>
         </div>
       </main>
     </div>

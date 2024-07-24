@@ -1,4 +1,11 @@
-
+:root {
+  --background-color: #f5f5f5;
+  --white-color: #ffffff;
+  --highlight-color: #ff6347;
+  --highlight-color1: #ff4500;
+  --primary-color: #333333;
+  --gray-dark: #666666;
+}
 
 .home-section {
   background-color: var(--background-color);
@@ -56,7 +63,7 @@
 }
 
 .book-now-btn:hover {
-  background-color:var(--highlight-color1);
+  background-color: var(--highlight-color1);
 }
 
 .book-now-btn a {
@@ -76,19 +83,123 @@
   border-radius: 10px;
 }
 
+.booking-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-form-container {
+  background: var(--white-color);
+  padding: 20px;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Large desktops and large screens */
+@media (min-width: 1200px) {
   .home-container {
-    flex-direction: column;
+    padding: 50px;
+  }
+}
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 30px;
+  }
+
+  .home-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets and small screens */
+@media (max-width: 768px) {
+  .home-section {
+    padding: 40px 15px;
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
     padding: 20px;
   }
 
   .home-content {
     padding-right: 0;
     text-align: center;
+    margin-top: 20px;
   }
 
   .home-image {
-    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .book-now-btn {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .home-section {
+    padding: 30px 10px;
+  }
+
+  .home-container {
+    padding: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .book-now-btn {
+    width: 100%;
+  }
+
+  .booking-form-container {
+    width: 95%;
   }
 }

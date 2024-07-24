@@ -1,4 +1,4 @@
-import FAQ from "../faq/FAQ";
+import Faq from "../faq/Faq";
 import BookingProcess from "./BookingProcess";
 import DiscoverExperiences from "./DiscoverExperiences";
 import Home from "./Home";
@@ -18,7 +18,7 @@ export default function HomeSkeleton() {
         <ServiceCoverage />
         <Team/>
         <Package />
-        <FAQ />
+        <Faq />
         <Testimonial />
       
     </div>

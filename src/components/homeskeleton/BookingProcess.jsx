@@ -11,7 +11,7 @@ export default function BookingProcess() {
       <div className='steps'>
         <div className='step'>
           <div className='step__image'>
-            <img src={NAIL2} alt='Meeting' />
+            <img src={NAIL2} alt='Schedule Online' />
             <div className='step__number'>01</div>
           </div>
           <h3 className='step__title'>Schedule Online</h3>
@@ -21,7 +21,7 @@ export default function BookingProcess() {
         </div>
         <div className='step'>
           <div className='step__image'>
-            <img src={NAIL1} alt='Treatment' />
+            <img src={NAIL1} alt='We Come To Your Home or Hotel' />
             <div className='step__number'>02</div>
           </div>
           <h3 className='step__title'>We Come To Your Home or Hotel</h3>
@@ -31,7 +31,7 @@ export default function BookingProcess() {
         </div>
         <div className='step'>
           <div className='step__image'>
-            <img src={NAIL} alt='Finalizing' />
+            <img src={NAIL} alt='You Experience' />
             <div className='step__number'>03</div>
           </div>
           <h3 className='step__title'>You Experience</h3>

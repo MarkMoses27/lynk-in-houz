@@ -9,10 +9,6 @@ const NailExtension = () => {
     options: ["Acrylic", "Gel", "Fiberglass"]
   };
 
-  const handleBooking = () => {
-    alert("Booking Nail Extension service. In a full application, this would open a booking form.");
-  };
-
   return (
     <div className="nail-extension">
       <header className="nail-extension-header">
@@ -38,12 +34,6 @@ const NailExtension = () => {
               ))}
             </ul>
           </div>
-        </div>
-
-        <div className="booking-section">
-          <button className="book-button" onClick={handleBooking}>
-            Book Nail Extension Service
-          </button>
         </div>
       </main>
     </div>

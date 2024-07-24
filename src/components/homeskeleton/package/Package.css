@@ -1,10 +1,22 @@
 
+
 .package-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 20px;
+  background-color: var(--background-color);
+  text-align: center; /* Center text inside container */
+}
+
+.main-title {
+  color: var(--primary-color);
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.package-grid {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 40px;
-  background-color: var(--bg-color);
+  justify-content: center;
 }
 
 .package-card {
@@ -12,7 +24,10 @@
   border: 1px solid var(--secondary-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 15px;
+  margin: 10px;
+  width: calc(100% - 20px); /* Default to full width with margins */
+  max-width: 300px; /* Max width for better readability */
   text-align: center;
   transition: transform 0.3s;
 }
@@ -23,52 +38,73 @@
 
 .package-title {
   color: var(--primary-color);
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .package-price-duration {
   color: var(--highlight-color);
-  font-size: 1.2em;
-  margin-bottom: 15px;
-}
-
-.package-services {
   font-size: 1em;
-  color: var(--gray-dark);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.package-description {
+.package-services,
+.package-description,
+.package-discount {
   font-size: 0.9em;
   color: var(--gray-dark);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.package-discount {
-  font-size: 1em;
-  color: var(--highlight-color);
-  margin-bottom: 20px;
-}
-
-.schedule-button {
+.book-now-button {
+  display: block;
   background-color: var(--highlight-color);
   color: var(--white-color);
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 1em;
   cursor: pointer;
+  text-decoration: none;
   transition: background-color 0.3s;
+  margin: 0 auto; /* Center button */
 }
 
-.schedule-button:hover {
-  background-color: #d35400;
+.book-now-button:hover {
+  background-color: #e67e22;
 }
 
-/* Media Queries */
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .package-card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
 @media (max-width: 768px) {
-  .package-container {
-    grid-template-columns: 1fr;
+  .package-card {
+    width: calc(100% - 20px); /* One card per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.5em;
+  }
+
+  .package-title {
+    font-size: 1em;
+  }
+
+  .package-price-duration,
+  .package-services,
+  .package-description,
+  .package-discount {
+    font-size: 0.85em;
+  }
+
+  .book-now-button {
+    font-size: 0.9em;
+    padding: 8px;
   }
 }

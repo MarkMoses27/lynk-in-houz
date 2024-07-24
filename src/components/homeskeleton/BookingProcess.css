@@ -42,16 +42,15 @@
 
 .step__image {
   position: relative;
-  width: 100%;
+  width: 200px;
   height: 200px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-}
-
-.step__image:hover {
-  transform: scale(1.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .step__image img {
@@ -109,12 +108,53 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .booking-process {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .step {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .booking-process {
+    padding: 2rem;
+  }
+
   .steps {
     flex-direction: column;
   }
 
   .step {
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-process {
+    padding: 1rem;
+  }
+
+  .step__number {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  .step__title {
+    font-size: 1.1rem;
+  }
+
+  .step__description {
+    font-size: 0.8rem;
   }
 }

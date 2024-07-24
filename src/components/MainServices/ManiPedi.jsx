@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import{ useState } from 'react';
 import './ManiPedi.css';
 
 const servicesData = [
@@ -45,9 +45,6 @@ const ManiPedi = () => {
         {servicesData.map((service, index) => (
           <ServiceItem key={index} {...service} />
         ))}
-      </div>
-      <div className="book-now-container">
-        <a href="#" className="book-now-button">Book Now</a>
       </div>
     </div>
   );

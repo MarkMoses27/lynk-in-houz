@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import LogoSVG from '../../assets/lynk-in-houz.svg';
+import LogoSVG from '../../assets/BeautyLogo.svg';
 import './Navbar.css';
 
 function Navbar() {

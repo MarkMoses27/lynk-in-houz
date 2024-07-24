@@ -43,14 +43,6 @@ const Massage = () => {
     },
   ];
 
-  const handleBooking = () => {
-    if (selectedMassage) {
-      alert(`Booking ${selectedMassage.name}. In a full application, this would open a booking form.`);
-    } else {
-      alert("Please select a massage type before booking.");
-    }
-  };
-
   return (
     <div className="massage">
       <div className="massage-header">
@@ -76,9 +68,6 @@ const Massage = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="booking-section">
-        <button onClick={handleBooking} className="book-button">Book Your Massage</button>
       </div>
     </div>
   );
