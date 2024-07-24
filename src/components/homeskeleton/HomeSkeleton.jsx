@@ -1,4 +1,4 @@
-import Faq from "../faq/Faq";
+import Faq from "../faq/FAQ";
 import BookingProcess from "./BookingProcess";
 import DiscoverExperiences from "./DiscoverExperiences";
 import Home from "./Home";
